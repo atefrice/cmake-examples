@@ -11,10 +11,19 @@ add_library(hello_library STATIC
     src/Hello.cpp
 )
 
+# target_include_directories(hello_library
+#     PUBLIC 
+#         ${PROJECT_SOURCE_DIR}/include
+# )
+
+
+
 target_include_directories(hello_library
-    PUBLIC 
+    PRIVATE 
         ${PROJECT_SOURCE_DIR}/include
 )
+
+
 
 
 ############################################################
@@ -24,6 +33,11 @@ target_include_directories(hello_library
 # Add an executable with the above sources
 add_executable(hello_binary 
     src/main.cpp
+)
+
+target_include_directories(hello_binary
+    PRIVATE 
+        ${PROJECT_SOURCE_DIR}/include
 )
 
 # link the new hello_library target with the hello_binary target
