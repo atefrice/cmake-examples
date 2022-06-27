@@ -31,3 +31,7 @@ target_link_libraries( hello_binary
     PRIVATE 
         hello::library
 )
+
+
+# target_link_directories()   上边没有调用该接口, 他是如何知道 到哪些目录找库文件的?????
+# 自动把 build 目录添加到 链接 库搜索目录么?
