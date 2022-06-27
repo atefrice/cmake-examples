@@ -57,6 +57,7 @@ install_manifest.txt
 *.out
 *.app
 
+/**/install
 /**/build
 /**/build.*
 
