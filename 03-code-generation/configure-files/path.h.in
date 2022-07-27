@@ -5,4 +5,6 @@
 // This shows an example using the @ variable type
 const char* path = "@CMAKE_SOURCE_DIR@";
 
+#cmakedefine LIFE_VALUE
+
 #endif
