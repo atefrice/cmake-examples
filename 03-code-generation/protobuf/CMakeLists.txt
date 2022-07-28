@@ -32,6 +32,8 @@ target_include_directories(protobuf_example
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+message("-------bin dir:${CMAKE_CURRENT_BINARY_DIR}")
+
 # link the exe against the libraries
 target_link_libraries(protobuf_example
     PUBLIC
