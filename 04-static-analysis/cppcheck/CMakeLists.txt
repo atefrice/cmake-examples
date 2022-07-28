@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 3.5)
 
 project(cppcheck_analysis)
 
+# c++ 代码静态分析工具 cppcheck , 看不太懂,用到的时候过来抄作业吧
+
 # Add a custom CMake Modules directory
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules
                       ${CMAKE_MODULE_PATH})
