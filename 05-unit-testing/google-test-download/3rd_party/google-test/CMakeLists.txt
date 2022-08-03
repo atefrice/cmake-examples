@@ -16,7 +16,7 @@ if(result)
   message(FATAL_ERROR "Build step for googletest failed: ${result}")
 endif()
 
-# Prevent overriding the parent project's compiler/linker
+# Prevent overriding the parent project's compiler/linkere
 # settings on Windows
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 # Prevent installation of GTest with your project

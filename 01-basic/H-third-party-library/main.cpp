@@ -7,6 +7,15 @@
 // #include <json/json.h>
 #include <jsoncpp/json/json.h>
 
+/*
+boost glog jsoncpp 都在 系统默认安装目录,
+boost 在 cmake的自带model中(findBoost.cmake 类似这样), 所以只要安装cmake,就能找到;
+glog 属于 config, 需要cmake 找 glogConfig.cmake这样的文件, 找到后的引用方法是 link lib glog::glog
+    通用的变量引用 jsoncpp_LIBRARIES 此处似乎不起作用.
+jsoncpp     
+
+*/
+
 // 直接使用 <json/json.h>, 那么 cmakelist 里 需要加  include_directories "/usr/local/jsoncpp"
 // 或者直接此处  <jsoncpp/json/json.h>, 则不用单独在 cmakelist中添加, 因为默认搜索路径包含/usr/local
 
@@ -24,6 +33,7 @@ std::vector<std::string> split(std::string s, std::string delim) {
   return result;
 }
 
+// test glog call
 void init_glog(char *process_name, const char *log_path)
 {
     FLAGS_log_dir     = log_path;  //日志文件的存储路径
